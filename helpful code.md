@@ -1,6 +1,9 @@
 # web-development-code
 It has all the codes of which are being used in the udemy course.
 
+![image](https://github.com/abhishek5434/web-development-code/assets/86175919/ecdee888-e192-4478-89ad-e157a4c558ec)
+
+
 ## HTML: Hyper Text Markup Language.
 -	Hyper Text is mainly hyperlink which redirects us to another page.
 -	Markup Language is HTML tags.
@@ -27,7 +30,7 @@ It has all the codes of which are being used in the udemy course.
 -	We can use www.lipsum.com to get the random paragraph and you can copy paste from there to use in your website. It can look like a real written text.
 
 ### Void element
-- ```HTML <hr /> ```
+- ``` <hr /> ```
 - It gives a horizontal line.
 - This can also be written as
 ```HTML
@@ -125,3 +128,57 @@ Result:
     <li><a href="www.geeksforgeeks.com">geeksforgeeks</a></li>
 </ol>
 
+### Image element
+- It does not have closing tag and hence it is also a void element
+- This is the simple form of code: ```<img src="url" />```
+- We can pick the random image from picsum.photos url
+- Do use the alt attribute in this img tag since it can help the user who wants to listen the website via reader
+- Here is one example:
+```HTML
+<img src="https://picsum.photos/200" alt="This is just an example" />
+```
+**Result:**
+
+<img src="https://picsum.photos/200" alt="This is just an example"/>
+
+Simple project using all the above concepts:
+
+```HTML
+<h1>It's my birthday today !</h1>
+<h2>On the 1st July</h2>
+<img src="https://gifocard.com/en/b/03/a/happy-birthday.gif.pagespeed.ce.EFmm7_XCG_.gif" alt="This is birthday cake"/>
+<h3>What to bring:</h3>
+<ul>
+    <li>Baloons</li>
+    <li>Cake</li>
+    <li>A gift</li>
+</ul>
+
+<h3>This is where you need to go</h3>
+<a href="https://maps.app.goo.gl/rLruqpyaKND2s5oG7">Google map link</a>
+```
+Result:
+<h1>It's my birthday today !</h1>
+<h2>On the 1st July</h2>
+<img src="https://gifocard.com/en/b/03/a/happy-birthday.gif.pagespeed.ce.EFmm7_XCG_.gif" alt="This is birthday cake"/>
+<h3>What to bring:</h3>
+<ul>
+    <li>Baloons</li>
+    <li>Cake</li>
+    <li>A gift</li>
+</ul>
+
+<h3>This is where you need to go</h3>
+<a href="https://maps.app.goo.gl/rLruqpyaKND2s5oG7">Google map link</a>
+
+### Relative and Absolute path
+**Absolute path**
+- An absolute path provides the full and exact location of a file or directory from the root directory.
+- Example: ```C:\Users\User\Documents\example.txt```
+
+**Relative path**
+- A relative path specifies the location of a file or directory in relation to the current working directory.
+- It does not start from the root directory; instead, it assumes a starting point and provides a path from that point.
+- Relative paths are often more convenient for specifying locations within the same project or directory structure.
+- Example 1 showing picking file from the same directory: ```./documents/example.txt```
+- Example 2 showing picking file from the different directory: ```../images/picture.jpg```
