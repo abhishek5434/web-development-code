@@ -182,3 +182,34 @@ Result:
 - Relative paths are often more convenient for specifying locations within the same project or directory structure.
 - Example 1 showing picking file from the same directory: ```./documents/example.txt```
 - Example 2 showing picking file from the different directory: ```../images/picture.jpg```
+
+We can link an url inside a picture like this:
+```HTML
+<a href="./public/about.html"> <img src="../../Pic with victor.png" alt="My picture with Victor"/></a>
+```
+### The HTML Boilerplate
+
+```HTML
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+    <!-- Add your additional meta tags, stylesheets, or scripts here -->
+</head>
+
+<body>
+    <!-- Your content goes here -->
+    <h1>Hello, World!</h1>
+
+    <!-- Add your HTML content, such as paragraphs, images, links, etc. -->
+
+    <!-- Add your scripts or additional content at the end of the body if needed -->
+
+</body>
+
+</html>
+```
+
