@@ -297,3 +297,318 @@ In CSS, the `color` property is used to set the text color of an element. It can
      }
      ```
 
+If you want to know the color name based on looking at the color you can use: https://developer.mozilla.org/en-US/docs/Web/CSS/named-color
+Color pallette link: https://colorhunt.co/
+
+# CSS Font properties
+CSS provides a variety of font properties that allow you to control the appearance of text within an HTML document. Here's a list of the main font properties in CSS along with examples of how to use each one:
+
+### 1. `font-family`
+Specifies the font for the text.
+
+```css
+p {
+  font-family: "Arial", sans-serif;
+}
+```
+If your system does not have the font you are looking for, then you can go to https://fonts.google.com/ choose the font you would like then go to get font and then click get embed code. Once you have that, copy and paste in the head tag then you will be able to use it.
+
+**`Here is an example:``**
+```CSS
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Font Family</title>
+    <style>
+      #helvetica {
+        font-family: Helvetica, sans-serif;
+      }
+
+      #arial {
+        font-family: Arial, sans-serif;
+      }
+
+      #serif {
+        font-family: serif;
+      }
+
+      #sans-serif {
+        font-family: sans-serif;
+      }
+
+      #cursive {
+        font-family: cursive;
+      }
+
+      #monospace {
+        font-family: monospace;
+      }
+
+      #fantasy {
+        font-family: fantasy;
+      }
+      h1 {
+        font-family: "Oswald", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-style: normal;
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <h1>Google font family</h1>
+    <p id="helvetica">Helvetica</p>
+    <p id="arial">Arial</p>
+    <p id="serif">Serif</p>
+    <p id="sans-serif">Sans Serif</p>
+    <p id="cursive">Cursive</p>
+    <p id="monospace">Monospace</p>
+    <p id="fantasy">Fantasy</p>
+  </body>
+</html>
+```
+
+### 2. `font-size`
+Sets the size of the font.
+Generally it is either in px (pixel) or in pt(point). 1 px is 1/96th inch which is 0.26mm and 1pt is 1/72nd inch which is 0.35mm. In the word doc when we select a font size of 12, it is actually 12 pt.
+1em (sounds as m) is a relative size. It is 100% of parent.
+1rem is 100% of root.
+
+```css
+p {
+  font-size: 16px;
+}
+```
+**`Example:`**
+```CSS
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Font-Size</title>
+    <style>
+      #pixel {
+        font-size: 20px;
+      }
+
+      #point {
+        font-size: 20pt;
+      }
+
+      #em {
+        font-size: 1em;
+      }
+
+      #rem {
+        font-size: 1rem;
+      }
+
+      footer {
+        font-size: 12pt;
+      }
+
+      html {
+        font-size: x-large;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p id="pixel">1 Pixel is 1/96 of an Inch</p>
+    <p id="point">1 Point is 1/72 of an Inch</p>
+    <footer>
+      <p id="em">1em is 100% the size of the parent element</p>
+      <p id="rem">1rem is 100% the size of the root element meaning the html element</p>
+    </footer>
+  </body>
+</html>
+```
+
+### 3. `font-style`
+Defines the style of the font, such as italic or normal.
+
+```css
+p {
+  font-style: italic;
+}
+```
+
+### 4. `font-weight`
+Controls the boldness of the font.
+
+```css
+p {
+  font-weight: bold;
+}
+```
+
+### 5. `font-variant`
+Controls the use of small caps font.
+
+```css
+p {
+  font-variant: small-caps;
+}
+```
+
+### 6. `line-height`
+Sets the line height to control the space between lines of text.
+
+```css
+p {
+  line-height: 1.5;
+}
+```
+
+### 7. `font-stretch`
+Allows you to make the text wider or narrower.
+
+```css
+p {
+  font-stretch: expanded;
+}
+```
+
+### 8. `letter-spacing`
+Increases or decreases the space between characters in the text.
+
+```css
+p {
+  letter-spacing: 2px;
+}
+```
+
+### 9. `word-spacing`
+Increases or decreases the space between words.
+
+```css
+p {
+  word-spacing: 1em;
+}
+```
+
+### 10. `text-transform`
+Controls the capitalization of text.
+
+```css
+p {
+  text-transform: uppercase;
+}
+```
+
+### 11. `text-decoration`
+Adds decoration to text such as underlines, overlines, line-throughs, and none.
+
+```css
+p {
+  text-decoration: underline;
+}
+```
+
+### 12. `text-align`
+Specifies the horizontal alignment of text.
+
+```css
+p {
+  text-align: center;
+}
+```
+
+### 13. `text-indent`
+Indents the first line of a text block.
+
+```css
+p {
+  text-indent: 20px;
+}
+```
+
+### 14. `font`
+A shorthand property for setting all the font properties (except `line-height`) at once.
+
+```css
+p {
+  font: italic small-caps bold 12px/16px "Georgia", serif;
+}
+```
+
+Each of these properties gives you detailed control over how text is displayed on your web pages, allowing for both functional and creative text styling.
+
+**`Example using some of the properties`**
+```CSS
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Properties</title>
+  <style>
+    /* 6. Change the the root (html element) font size to 30px --> */
+    html {
+      font-size: 30px;
+    }
+
+    body {
+      background-color: cornflowerblue;
+      color: white;
+      font-size: 18px;
+    }
+
+    /* 1. Change the color of <p>Color</p> to "coral" color. */
+    #color {
+      color: coral;
+    }
+
+    /* 2. Change the font size of <p>Font Size</p> to to 2X the size of the root (html) element. */
+    #size {
+      font-size: 2rem;
+    }
+
+    /* 3. Change the font weight of <p>Font Weight</p> to 900. */
+    #weight {
+      font-weight: 900;
+    }
+
+    /* 4. Change the font family of <p>Font Family</p> to the Google font Caveat with regular (400) font weight.
+      Link: https://fonts.google.com/specimen/Caveat */
+    #family {
+      font-family: 'Caveat', cursive;
+    }
+
+    /* 5. Change the <p>Text Align</p> to right align. */
+    #align {
+      text-align: right;
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <h1>Important CSS Properties</h1>
+  <p id="color">Color</p>
+  <p id="size">Font Size</p>
+  <p id="weight">Font Weight</p>
+  <p id="family">Font Family</p>
+  <p id="align">Text Align</p>
+</body>
+
+</html>
+```
+# Inspecting CSS
+Shortcut key to open Chrome console: `CRTL + SHIFT + I` or `F12`
+`CTRL + L` to clear the console
+
+**How do we know what are the CSS applied in the website ?**
+- We can go to Elements --> computed --> see all the filter that has been applied
+- We can also go to 3 dot of the console --> More tools --> CSS Overview --> Capture Overview --> It gives all the overview of the CSS used. It also gives the hex codes of the code that is being used.
+
