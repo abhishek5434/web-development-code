@@ -612,3 +612,5 @@ Shortcut key to open Chrome console: `CRTL + SHIFT + I` or `F12`
 - We can go to Elements --> computed --> see all the filter that has been applied
 - We can also go to 3 dot of the console --> More tools --> CSS Overview --> Capture Overview --> It gives all the overview of the CSS used. It also gives the hex codes of the code that is being used.
 
+# CSS precedence
+![image](https://github.com/abhishek5434/web-development-code/assets/86175919/2200d885-db6d-4b7f-a700-42498ec84100)
