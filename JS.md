@@ -66,4 +66,11 @@ var slicedTweet= mytweet.slice(0,140)
 alert(slicedTweet);
 ```
 **UpperCase/LowerCase**
+```JS
+// Challenge: Ask the name of the user, Convert first letter in lower case and other letter in upper case
 
+var nameOfUser = prompt("Please provide your name: ")
+var firstLetter = nameOfUser.slice(0,1)
+var capitalFirstLetter = firstLetter.toUpperCase()
+alert(capitalFirstLetter+nameOfUser.slice(1,nameOfUser.length).toLowerCase())
+```
