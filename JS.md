@@ -16,14 +16,7 @@ Boolean: false/true
 
 typeof function can help show the data type of the value. Ex: `typeof('Abhishek')` `Result: Abhishek`
 
-# Defining Variable
-
-```JS
-var myname= 'Abhishek'
-alert(myname)
-typeof(myname)
-```
-Overview of the JS environment:
+# Overview of the JS environment:
 <kbd>
   <img src="https://github.com/abhishek5434/web-development-code/assets/86175919/0a2ae98e-0212-4df1-badf-126962c9d1d4">
 </kbd>
@@ -35,7 +28,81 @@ you can delete the console using `Window + L` but it doesn't remove the defined 
   <img src="https://github.com/abhishek5434/web-development-code/assets/86175919/360d701b-b674-453c-8526-1837dcfa74fa">
 </kbd>
 
+# Declaring Variable
+In JavaScript, there are three main ways to declare variables: using `var`, `let`, and `const`. Each has its own characteristics and scope rules. Here's a detailed explanation of each:
 
+### 1. `var`
+- **Scope**: `var` is function-scoped, meaning it is only accessible within the function it is declared in. If declared outside of a function, it becomes globally scoped.
+- **Hoisting**: `var` declarations are hoisted to the top of their scope. This means the variable can be used before its declaration, but it will be `undefined`.
+- **Re-declaration**: Variables declared with `var` can be re-declared within the same scope.
+
+```javascript
+function example() {
+    console.log(a); // Output: undefined (due to hoisting)
+    var a = 10;
+    console.log(a); // Output: 10
+}
+
+var b = 20;
+var b = 30; // Re-declaration is allowed
+console.log(b); // Output: 30
+```
+
+### 2. `let`
+- **Scope**: `let` is block-scoped, meaning it is only accessible within the block (enclosed by `{}`) it is declared in.
+- **Hoisting**: `let` declarations are hoisted but not initialized. Accessing the variable before declaration results in a `ReferenceError`.
+- **Re-declaration**: Variables declared with `let` cannot be re-declared within the same scope.
+
+```javascript
+function example() {
+    // console.log(a); // ReferenceError: Cannot access 'a' before initialization
+    let a = 10;
+    console.log(a); // Output: 10
+}
+
+let b = 20;
+// let b = 30; // SyntaxError: Identifier 'b' has already been declared
+console.log(b); // Output: 20
+```
+
+### 3. `const`
+- **Scope**: `const` is block-scoped, similar to `let`.
+- **Hoisting**: `const` declarations are hoisted but not initialized. Accessing the variable before declaration results in a `ReferenceError`.
+- **Re-declaration**: Variables declared with `const` cannot be re-declared within the same scope.
+- **Immutability**: The value of a `const` variable cannot be changed through reassignment. However, if the variable is an object or an array, its properties or elements can be modified.
+
+```javascript
+function example() {
+    // console.log(a); // ReferenceError: Cannot access 'a' before initialization
+    const a = 10;
+    console.log(a); // Output: 10
+    // a = 20; // TypeError: Assignment to constant variable.
+}
+
+const b = 20;
+// const b = 30; // SyntaxError: Identifier 'b' has already been declared
+console.log(b); // Output: 20
+
+const c = { name: "Alice" };
+c.name = "Bob"; // Allowed: Properties of objects can be changed
+console.log(c.name); // Output: Bob
+```
+
+### Summary of Differences
+- **Scope**:
+  - `var`: Function-scoped
+  - `let` and `const`: Block-scoped
+- **Hoisting**:
+  - `var`: Hoisted and initialized with `undefined`
+  - `let` and `const`: Hoisted but not initialized
+- **Re-declaration**:
+  - `var`: Can be re-declared
+  - `let` and `const`: Cannot be re-declared in the same scope
+- **Immutability**:
+  - `var` and `let`: Values can be changed
+  - `const`: Value cannot be changed through reassignment (except for object properties and array elements)
+
+Understanding these differences is crucial for writing clean, bug-free JavaScript code. Using `let` and `const` is generally preferred in modern JavaScript due to their block scope and safer behavior with hoisting.
 # Naming convention of variable
 - Variable can't be started with number
 - Always advised to use meaningful name
@@ -328,3 +395,225 @@ let postfixDecrement = a--; // Output: 4 (a is now 3 after this statement)
 | `--`      | Decrement     | Decreases a number by one                         | `let a = 5; a--`      | `4`    |
 
 These arithmetic operators are fundamental to performing calculations and manipulating numerical values in JavaScript.
+
+# Most used Math functions
+JavaScript provides a robust `Math` object that includes various functions to perform mathematical operations. Here are some of the most commonly used `Math` functions in JavaScript:
+
+1. **`Math.abs(x)`**: Returns the absolute value of a number.
+   ```javascript
+   console.log(Math.abs(-5)); // Output: 5
+   ```
+
+2. **`Math.ceil(x)`**: Rounds a number upwards to the nearest integer.
+   ```javascript
+   console.log(Math.ceil(4.2)); // Output: 5
+   ```
+
+3. **`Math.floor(x)`**: Rounds a number downwards to the nearest integer.
+   ```javascript
+   console.log(Math.floor(4.8)); // Output: 4
+   ```
+
+4. **`Math.round(x)`**: Rounds a number to the nearest integer.
+   ```javascript
+   console.log(Math.round(4.5)); // Output: 5
+   console.log(Math.round(4.4)); // Output: 4
+   ```
+
+5. **`Math.max(...values)`**: Returns the largest of zero or more numbers.
+   ```javascript
+   console.log(Math.max(1, 2, 3, 4, 5)); // Output: 5
+   ```
+
+6. **`Math.min(...values)`**: Returns the smallest of zero or more numbers.
+   ```javascript
+   console.log(Math.min(1, 2, 3, 4, 5)); // Output: 1
+   ```
+
+7. **`Math.random()`**: Returns a pseudo-random number between 0 (inclusive) and 1 (exclusive).
+   ```javascript
+   console.log(Math.random()); // Output: A random number between 0 and 1
+   ```
+
+8. **`Math.sqrt(x)`**: Returns the square root of a number.
+   ```javascript
+   console.log(Math.sqrt(16)); // Output: 4
+   ```
+
+9. **`Math.pow(base, exponent)`**: Returns the base to the exponent power, that is, `base^exponent`.
+   ```javascript
+   console.log(Math.pow(2, 3)); // Output: 8
+   ```
+
+10. **`Math.exp(x)`**: Returns `E^x`, where `E` is Euler's number (approximately 2.718).
+    ```javascript
+    console.log(Math.exp(1)); // Output: 2.718281828459045
+    ```
+
+11. **`Math.log(x)`**: Returns the natural logarithm (base `E`) of a number.
+    ```javascript
+    console.log(Math.log(10)); // Output: 2.302585092994046
+    ```
+
+12. **`Math.sin(x)`**: Returns the sine of a number (angle in radians).
+    ```javascript
+    console.log(Math.sin(Math.PI / 2)); // Output: 1
+    ```
+
+13. **`Math.cos(x)`**: Returns the cosine of a number (angle in radians).
+    ```javascript
+    console.log(Math.cos(0)); // Output: 1
+    ```
+
+14. **`Math.tan(x)`**: Returns the tangent of a number (angle in radians).
+    ```javascript
+    console.log(Math.tan(Math.PI / 4)); // Output: 1
+    ```
+
+These functions cover a wide range of mathematical operations and are frequently used in various programming tasks. For more detailed information, we can refer to the [MDN Web Docs on Math](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math).
+
+# Control Flow
+Control flow in JavaScript determines the order in which statements are executed. The flow of control can be altered using various statements such as conditionals, loops, and other control structures. Here are the key elements of control flow in JavaScript:
+
+### 1. Sequential Execution
+By default, JavaScript code is executed from top to bottom, line by line.
+
+```javascript
+console.log("Start");
+console.log("Middle");
+console.log("End");
+```
+
+### 2. Conditional Statements
+Conditional statements allow you to execute code based on certain conditions.
+
+#### `if` statement
+Executes a block of code if the specified condition is true.
+
+```javascript
+let age = 18;
+if (age >= 18) {
+    console.log("You are an adult.");
+}
+```
+
+#### `if...else` statement
+Executes one block of code if the condition is true, and another block if the condition is false.
+
+```javascript
+let age = 16;
+if (age >= 18) {
+    console.log("You are an adult.");
+} else {
+    console.log("You are a minor.");
+}
+```
+
+#### `if...else if...else` statement
+Tests multiple conditions.
+
+```javascript
+let score = 85;
+if (score >= 90) {
+    console.log("Grade: A");
+} else if (score >= 80) {
+    console.log("Grade: B");
+} else if (score >= 70) {
+    console.log("Grade: C");
+} else {
+    console.log("Grade: F");
+}
+```
+
+#### `switch` statement
+Executes one of many blocks of code based on the value of an expression.
+
+```javascript
+let day = 3;
+switch (day) {
+    case 1:
+        console.log("Monday");
+        break;
+    case 2:
+        console.log("Tuesday");
+        break;
+    case 3:
+        console.log("Wednesday");
+        break;
+    default:
+        console.log("Another day");
+}
+```
+
+### 3. Looping Statements
+Loops allow you to execute a block of code multiple times.
+
+#### `for` loop
+Loops through a block of code a specified number of times.
+
+```javascript
+for (let i = 0; i < 5; i++) {
+    console.log("Iteration " + i);
+}
+```
+
+#### `while` loop
+Executes a block of code as long as a specified condition is true.
+
+```javascript
+let i = 0;
+while (i < 5) {
+    console.log("Iteration " + i);
+    i++;
+}
+```
+
+#### `do...while` loop
+Executes a block of code once, and then repeats the loop as long as the specified condition is true.
+
+```javascript
+let i = 0;
+do {
+    console.log("Iteration " + i);
+    i++;
+} while (i < 5);
+```
+
+### 4. Control Flow Interruptions
+These statements alter the normal flow of control.
+
+#### `break` statement
+Exits a loop or switch statement prematurely.
+
+```javascript
+for (let i = 0; i < 10; i++) {
+    if (i === 5) {
+        break; // Exit the loop when i is 5
+    }
+    console.log(i);
+}
+```
+
+#### `continue` statement
+Skips the rest of the code inside the loop for the current iteration and jumps to the next iteration.
+
+```javascript
+for (let i = 0; i < 10; i++) {
+    if (i % 2 === 0) {
+        continue; // Skip the even numbers
+    }
+    console.log(i);
+}
+```
+
+#### `return` statement
+Exits a function and optionally returns a value.
+
+```javascript
+function add(a, b) {
+    return a + b;
+}
+console.log(add(2, 3)); // Output: 5
+```
+
+Understanding these control flow elements is crucial for writing efficient and effective JavaScript code. They allow you to control the execution path and perform complex operations based on dynamic conditions. If you have specific scenarios or further questions, feel free to ask!
